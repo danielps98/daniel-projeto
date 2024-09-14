@@ -1,0 +1,35 @@
+
+@keyframes  caixa{
+for{
+top: 500px;background-color:rgb(23, 22, 22) ;
+
+} 
+to{
+    left: 50px;background-color: rgb(88, 94, 94);
+  
+}
+
+    }
+   
+
+body{
+    background-color: black;
+    font-size: 18px;
+    height: 800px;
+    
+}
+header{
+animation-name: caixa;
+animation-duration: 2s;
+animation-delay: 2s;
+animation-direction: alternate;
+animation-iteration-count:infinite;
+anim
+}
+ /* img {
+    width: 10rem;largura
+    height10rem; altura */
+
+img{
+    width: 12% ;
+}
