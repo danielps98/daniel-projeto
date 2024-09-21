@@ -39,6 +39,7 @@ animation-iteration-count:infinite;
    margin: 0; /* Remove margens padrão de todos os elementos */
    padding: 0; /* Remove preenchimento padrão de todos os elementos */
    box-sizing: border-box; /* Corrige o box model para border-box */
+   list-style: none;
 }
 
 body {
@@ -56,11 +57,8 @@ a:hover {
    color: var(--hover-menu); /* Altera a cor dos links ao passar o mouse */
 }
 
-ul{
-    text-decoration: none;
-    list-style-type: none;
-}
-   
+
+
 
 /* Estilização para a classe logo */
 .logo {
@@ -98,16 +96,48 @@ display: flex;
 align-items: center;
 background: var(--primary-bg);
 gap: 1rem;
+text-decoration: none;
+list-style: none;
 }
 
+menu-item{
+    width: 100px;
+}
 
-
-
-
-
-/* 
 
 .header-nav{
 display: none;
 
-} */
+}
+
+/* menu-mobile */
+.menu-mobile{
+width: 100vw;/* v w=viewport width */
+position: fixed;
+bottom: 0;
+justify-content: space-between;
+border-top: 1px solid red;
+}
+
+.menu-mobile .menu-link {
+flex-direction: column;
+justify-content: center;
+padding: 0.5rem 1rem;
+}
+
+/* responsividade 
+responsivo*/
+@media (min-width: 768px){
+#header{
+    position: fixed;
+    padding: 1rem 6rem;
+}
+.nav-mobile
+{
+display: none;
+
+}
+.header-nav{
+    display: flex;
+}
+}
