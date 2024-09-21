@@ -1,35 +1,74 @@
 
-@keyframes  caixa{
-for{
-top: 500px;background-color:rgb(23, 22, 22) ;
+/* @keyframes  caixa{
+form{
+top: 300px;background-color:rgb(59, 49, 49) ;
 
 } 
 to{
-    left: 50px;background-color: rgb(88, 94, 94);
-  
-}
+    left: 200px;background-color: rgb(88, 94, 94) ;
 
-    }
-   
-
-body{
-    background-color: black;
-    font-size: 18px;
-    height: 800px;
-    
-}
-header{
+}header{
 animation-name: caixa;
 animation-duration: 2s;
 animation-delay: 2s;
 animation-direction: alternate;
 animation-iteration-count:infinite;
-anim
+
+} */
+
+ 
+   
+:root,
+:root[data-theme="dark"] {
+
+   /* --cor-texto-primario: #000; */
+   --primary-color: #e0e0e0; ;    /* texto */
+   --primary-bg:black; /* bg background */
+   --hover-menu:#7a2b2b;
+   --icon-color:blue ;
+   }
+
+
+:root[data-theme="light"] {
+    
+    --primary-color:black;    /* texto */
+    --primary-bg:#e0e0e  /* bg background */
+  
 }
+
+*{
+margin: 0;
+padding: 0;
+
+}
+body{
+ background: var(--primary-bg);  
+color: var(--primary-color);
+font-family: Verdana, Geneva, Tahoma, sans-serif;
+
+}
+
+a {
+text-decoration: none;
+color: var(--primary-color);
+}
+
+a:hover {
+color:var(--hover-menu);
+
+}
+
  /* img {
-    width: 10rem;largura
-    height10rem; altura */
+    width: 10rem;   largura
+    height10rem;    altura */
 
 img{
-    width: 12% ;
+    width: 12%;
 }
+
+i{
+    color: var(--icon-color);
+}
+
+
+
