@@ -20,55 +20,94 @@ animation-iteration-count:infinite;
    
 :root,
 :root[data-theme="dark"] {
-
-   /* --cor-texto-primario: #000; */
-   --primary-color: #e0e0e0; ;    /* texto */
-   --primary-bg:black; /* bg background */
-   --hover-menu:#7a2b2b;
-   --icon-color:blue ;
-   }
-
+   /* Variáveis para o tema escuro */
+   /* --cor-texto-primario: #000; */ /* Comentada: Cor de texto primário, não utilizada */
+   --primary-color: #e0e0e0; /* Cor principal para o texto no tema escuro */
+   --primary-bg: black; /* Cor de fundo principal no tema escuro */
+   --hover-menu: #7a2b2b; /* Cor para o fundo do menu ao passar o mouse */
+   --icon-color: blue; /* Cor dos ícones */
+}
 
 :root[data-theme="light"] {
-    
-    --primary-color:black;    /* texto */
-    --primary-bg:#e0e0e  /* bg background */
-  
+   /* Variáveis para o tema claro */
+   --primary-color: black; /* Cor principal para o texto no tema claro */
+   --primary-bg: #e0e0e0; /* Cor de fundo principal no tema claro */
 }
 
-*{
-margin: 0;
-padding: 0;
-
+/* Resetando margens e preenchimentos e definindo box-sizing */
+* {
+   margin: 0; /* Remove margens padrão de todos os elementos */
+   padding: 0; /* Remove preenchimento padrão de todos os elementos */
+   box-sizing: border-box; /* Corrige o box model para border-box */
 }
-body{
- background: var(--primary-bg);  
-color: var(--primary-color);
-font-family: Verdana, Geneva, Tahoma, sans-serif;
 
+body {
+   background: var(--primary-bg); /* Define a cor de fundo do body usando a variável de fundo */
+   color: var(--primary-color); /* Define a cor do texto usando a variável de cor primária */
+   font-family: Verdana, Geneva, Tahoma, sans-serif; /* Define a fonte padrão do corpo */
 }
 
 a {
-text-decoration: none;
-color: var(--primary-color);
+   text-decoration: none; /* Remove o sublinhado padrão dos links */
+   color: var(--primary-color); /* Define a cor dos links usando a variável de cor primária */
 }
 
 a:hover {
-color:var(--hover-menu);
-
+   color: var(--hover-menu); /* Altera a cor dos links ao passar o mouse */
 }
 
- /* img {
-    width: 10rem;   largura
-    height10rem;    altura */
+ul{
+    text-decoration: none;
+    list-style-type: none;
+}
+   
 
-img{
-    width: 12%;
+/* Estilização para a classe logo */
+.logo {
+   width: 3.25rem; /* Define a largura da logo */
+   height: 3.25rem; /* Define a altura da logo */
 }
 
-i{
-    color: var(--icon-color);
+i {
+   color: var(--icon-color); /* Define a cor dos ícones usando a variável de cor dos ícones */
+}
+
+header {
+   display: flex; /* Define o header como um flex container */
+   flex-flow: row wrap; /* Organiza os itens em linhas e permite quebrar para a próxima linha */
+   justify-content: space-between; /* Distribui os itens com espaço igual entre eles */
+   align-items: center; /* Alinha os itens verticalmente ao centro */
+   width: 100%; /* Define a largura do header como 100% do elemento pai */
+   z-index: 2; /* Define a ordem de empilhamento do header */
+   padding: 0.5rem 1rem; /* Aplica espaçamento interno ao header */
+}
+
+.header-toggle {
+   display: flex; /* Define a seção de toggle como um flex container */
+   justify-content: flex-end; /* Alinha os itens ao final do contêiner */
+}
+
+#toggletheme {
+   color: yellow; /* Define a cor do ícone de toggle como amarelo */
+   font-size: 2rem; /* Define o tamanho da fonte do ícone de toggle */
+   cursor: pointer; /* Altera o cursor para indicar que é clicável */
+}
+
+.menu{ /* ul */
+display: flex;
+align-items: center;
+background: var(--primary-bg);
+gap: 1rem;
 }
 
 
 
+
+
+
+/* 
+
+.header-nav{
+display: none;
+
+} */
