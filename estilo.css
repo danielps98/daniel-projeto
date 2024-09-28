@@ -1,3 +1,313 @@
-body{
-background: rgb(231, 38, 38);
+:root,
+:root[data-theme="dark"] {
+    --primary-color: #fff;
+    /* cor do texto para o tema escuro */
+    --primary-bg: hsl(0, 0%, 0%);
+    /* cor de fundo para o tema escuro */
+    --hover-menu: #6b6565;
+    /* cor do menu ao passar o mouse */
+    --icon-color: #7b5ac7;
+    /* cor dos ícones */
+    --icon-tema: #cfb12a;
+    --hover-social{color: aqua;}
+    --menu-texto:var(--primary-color);
+    
+}
+
+:root[data-theme="light"] {
+    --cor-texto-primario: #000;
+    /* cor do texto para o tema claro */
+    --primary-bg: #fff;
+    /* cor de fundo para o tema claro */
+    --primary-color: #000;
+    /* cor do texto para o tema claro */
+    --hover-social {
+        color:yellow ;
+    }
+}
+
+body {
+    background: var(--primary-bg);
+    /* define a cor de fundo do body */
+    color: var(--primary-color);
+    /* define a cor do texto */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* fontes utilizadas para o texto */
+}
+
+html[data-theme="light"] .logo {
+     filter:invert(1);
+}
+
+a {
+    text-decoration: none;
+    /* remove o sublinhado dos links */
+    color: var(--primary-color);
+    /* define a cor padrão dos links */
+}
+
+a:hover {
+    color: var(--hover-menu);
+    /* define a cor dos links ao passar o mouse */
+}
+
+i {
+    color: var(--icon-color);
+    /* define a cor dos ícones */
+ 
+}
+
+b {
+  font-weight: 600; 
+  
+}
+
+h1 {
+    font-size: 2rem;
+    font: weight 200px; ;
+}
+
+h2 {
+
+
+}
+h3 {
+
+
+}
+
+p, span, li {
+font-size: 1rem;
+
+}
+
+
+p {
+    text-align: justify;
+    margin: 10px;
+  
+}
+/* Reset CSS para remover margens e preenchimentos padrão */
+* {
+    margin: 0;
+    /* remove margens de todos os elementos */
+    padding: 0;
+    /* remove preenchimentos de todos os elementos */
+    box-sizing: border-box;
+    /* inclui bordas e preenchimentos no tamanho total do elemento */
+    list-style: none;
+}
+
+/* Fim do reset */
+
+/* Estilo para o header */
+#header {
+    display: flex;
+    /* ativa o modo de layout flexível */
+    flex-flow: row wrap;
+    /* itens dispostos em linha e quebram para a próxima linha se necessário */
+    justify-content: space-between;
+    /* distribui espaços entre os itens */
+    align-items: center;
+    /* alinha os itens verticalmente no centro do contêiner */
+    width: 100%;
+    /* largura total do contêiner */
+    padding: 0.5rem 1rem;
+    /* espaçamento interno do header */
+    z-index: 2;
+    /* define a ordem de empilhamento do header */
+    background: var(--primary-bg);
+}
+
+/* Estilo para a logo */
+.logo {
+    width: 3.25rem;
+    /* largura da logo */
+    height: 3.25rem;
+    /* altura da logo */
+}
+
+/* Estilo para o botão de alternar tema */
+.header-toggle {
+    display: flex;
+    /* ativa o modo flexível */
+    justify-content: flex-end;
+    /* alinha o conteúdo à direita */
+}
+
+/* Estilo específico para o botão de alternar tema */
+#toggleTheme {
+    color: var(--icon-tema);
+    /* cor do texto do botão */
+    font-size: 2rem;
+    /* tamanho da fonte do botão */
+    cursor: pointer;
+    /* muda o cursor para indicar que é clicável */
+}
+
+.menu {
+    /* UL */
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg);
+    gap: 1rem;
+}
+
+
+.menu-item {
+    width: 100%;
+}
+
+
+/* .menu-link {
+    display: flex;
+    align-items: ;
+}
+ */
+
+.header-nav {
+    display: none;
+}
+
+
+/* menu-mobile */
+.menu-mobile {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    border-top: 1px solid white;
+}
+
+
+.menu-mobile .menu-link {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+}
+
+.menu-link.active .menu-icon,
+.menu-link.active .menu-text,
+.menu-link:hover .menu-icon,
+.menu-link:hover .menu-text {
+color: rgb(216, 15, 172);/*  cor de link */
+
+}
+
+.menu-icon, .menu-text {
+    color:var(--menu-texto);
+    font-weight: 600;
+     
+}
+
+ .menu-icon {
+    font-size: 2rem;
+ }
+
+ .menu-link:hover .whats{
+    color: #000;
+ }
+
+ .menu-text {
+    font-size: .75rem;
+    text-transform: uppercase;
+ }
+
+ .menu-principal {
+     gap: 3rem;  
+ }
+ .menu-social {
+    gap: 2rem;
+   
+ }
+
+
+
+
+.menu-social
+.menu-icon:hover {
+    color: #f401fc;
+    padding: 2px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    background: transparent;
+    border-radius: 3rem;
+    color: var(--primary-color);
+    border: none;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+
+}
+.btn:hover{
+    transform: scale(1.05);
+  transition: ease-in-out .5s;
+ 
+}
+
+.btn span, .btn i {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+}
+.btn-primary span{
+    color: var(--primary-color);
+}
+.btn-primary{
+    border: 3px solid var(--hover-menu);
+}
+
+
+/* main
+ */
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.video iframe {
+    width: 100%;
+    aspect-ratio:16/9 ;
+}
+
+#home, .projetos, .sobre, .contato {
+    padding: 2.5rem 1rem;
+}
+
+/* responsividae */
+@media (min-width:768px) {
+    #header {
+        position: fixed;
+        padding: 1rem 6rem;
+    }
+
+    .nav-mobile{
+        display: none;
+    }
+
+    .header-nav {
+        display: flex;
+    }
+    .header-nav,
+    .header-toggle {
+        min-width:30%;
+    }
+    h1{
+        font-size: 5rem;
+    }
+    #home, .projetos, .sobre {
+        padding: 8rem 6rem 4rem 6rem;
+    }
 }
