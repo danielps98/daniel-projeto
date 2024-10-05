@@ -186,27 +186,65 @@ p {
     padding: 0.5rem 1rem;
 }
 
-.menu-link.active .menu-icon,
+
 .menu-link.active .menu-text,
-.menu-link:hover .menu-icon,
 .menu-link:hover .menu-text {
 color: rgb(216, 15, 172);/*  cor de link */
 
 }
 
-.menu-icon, .menu-text {
+.menu-icon1, .menu-text {
     color:var(--menu-texto);
+  
+    
+}
+
+.menu-link:hover,.bi-whatsapp{
+color: #cfb12a;
+    }
+
+
+
+
+
+.menu-icon1{
+    color: #a19797; /* bi-github */
     font-weight: 600;
-     
+    font-size: 2rem;
+    
+}
+
+
+.menu-icon2{
+    color: #01ca2c; /* bi bi-whatsapp */
+    font-weight: 600;
+    font-size: 2rem;
+    
+}
+.menu-icon3{
+    color: #1f21c2; /* menu-icon3 bi bi-facebook */
+    font-weight: 600;
+    font-size: 2rem;
+    
+}
+.menu-icon4{
+    color: #134aaf; /* bi bi-linkedin */
+    font-weight: 600;
+    font-size: 2rem;
+    
+}
+.menu-icon1:hover,
+.menu-icon2:hover,
+.menu-icon3:hover,
+.menu-icon4:hover{
+    color: #ddc7c7;
 }
 
  .menu-icon {
     font-size: 2rem;
  }
 
- .menu-link:hover .whats{
-    color: #000;
- }
+ 
 
  .menu-text {
     font-size: .75rem;
@@ -286,6 +324,17 @@ main-content {
     padding: 2.5rem 1rem;
 }
 
+.projetos{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+.projetos-conteiner{
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
 /* responsividae */
 @media (min-width:768px) {
     #header {
@@ -307,7 +356,12 @@ main-content {
     h1{
         font-size: 5rem;
     }
-    #home, .projetos, .sobre {
+    #home, .projetos, .sobre, .contato {
         padding: 8rem 6rem 4rem 6rem;
     }
 }
+
+.cor{
+    color: red;
+}
+
