@@ -7,11 +7,12 @@
     --hover-menu: #6b6565;
     /* cor do menu ao passar o mouse */
     --icon-color: #7b5ac7;
-    /* cor dos ícones */
+    /* cor dos ícones */ 
     --icon-tema: #cfb12a;
-    --hover-social{color: aqua;}
+    --hover-socia: aqua;
     --menu-texto:var(--primary-color);
-    
+    --cor-titulo:var(--primary-color)
+
 }
 
 :root[data-theme="light"] {
@@ -23,6 +24,7 @@
     /* cor do texto para o tema claro */
     --hover-social {
         color:yellow ;
+        --cor-titulo:var( var(--cor-texto-primario))
     }
 }
 
@@ -189,7 +191,7 @@ p {
 
 .menu-link.active .menu-text,
 .menu-link:hover .menu-text {
-color: rgb(216, 15, 172);/*  cor de link */
+color: rgb(196, 39, 162);/*  cor de link */
 
 }
 
@@ -199,16 +201,18 @@ color: rgb(216, 15, 172);/*  cor de link */
     
 }
 
-.menu-link:hover,.bi-whatsapp{
-color: #cfb12a;
-    }
+/* .menu-link:hover,.{
+color: #b826a4;
+    } */
+
+
 
 
 
 
 
 .menu-icon1{
-    color: #a19797; /* bi-github */
+    color: #e7dddd; /* bi-github */
     font-weight: 600;
     font-size: 2rem;
     
@@ -222,7 +226,7 @@ color: #cfb12a;
     
 }
 .menu-icon3{
-    color: #1f21c2; /* menu-icon3 bi bi-facebook */
+    color: #1fa1c2; /* menu-icon3 bi bi-facebook */
     font-weight: 600;
     font-size: 2rem;
     
@@ -238,6 +242,8 @@ color: #cfb12a;
 .menu-icon3:hover,
 .menu-icon4:hover{
     color: #ddc7c7;
+    padding: 2px;
+    border-top: 1px solid white;
 }
 
  .menu-icon {
@@ -315,6 +321,7 @@ main-content {
     gap: 1.5rem;
 }
 
+
 .video iframe {
     width: 100%;
     aspect-ratio:16/9 ;
@@ -329,11 +336,129 @@ main-content {
     flex-direction: column;
     gap: 2rem;
 }
-.projetos-conteiner{
+
+.projetos-container{
     display: flex;
     flex-direction: column;
     gap: 4rem;
 }
+
+.projetos-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.card-cover { /* ima imagem ou fotos
+     */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 1rem;
+}
+
+
+.card-title { /* h3 */
+    font-size:1.5rem ;
+    color:var(--cor-titulo) ;
+    font-weight:100 ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card-lista, .sobre-lista {
+   margin-left: 1.25rem;
+   margin-top: 15px;
+   margin-bottom: 25px;
+}
+
+
+.card-button, .card-descricao{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: left;
+}
+
+.card-item, .sobre-item { /* topico lista  */
+    /* list-style:none */
+   list-style:none;               /* disc */
+
+
+}
+
+
+.card-item i.bi-cart {
+    color: #FFC107; /* Cor do ícone do Mercado Livre */
+}
+
+.card-item i.bi-house {
+    color: #FF5722; /* Cor do ícone das Casas Bahia */
+}
+
+.card-item i.bi-basket {
+    color: #007BFF; /* Cor do ícone das Americanas */
+}
+
+/* Efeito de hover */
+.card-item:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+}
+
+
+.card-item i.bi-controller {
+    color: #FF4081; /* Cor do ícone do Nintendo Switch */
+}
+
+.card-item i.bi-playstation {
+    color: #1E88E5; /* Cor do ícone do PS5 */
+}
+
+.card-item i.bi-google-play {
+    color: #76FF03; /* Cor do ícone do Google Play */
+}
+
+/* Efeito de hover */
+.card-item:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+}
+
+.card-item a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Herda a cor do elemento pai */
+    margin-left: 10px; /* Espaçamento entre o ícone e o texto */
+}
+.card-item .d1.bi-book{
+    color: #01ca2c;
+}
+.card-item .d2.bi-book{
+    color: #0158ca;
+}
+.card-item .d3.bi-book{
+    color: #ca0187;
+}
+
+
+.card-item:hover{
+    color: #134aaf;
+    padding: 2px;
+    
+}
+
+.card-button .btn {
+    padding: 0.65rem 1.25rem;
+    margin-top: 15px;
+}
+
+ 
+.card-button .btn span {
+    font-size: 1rem;
+}
+
+.projetos .btn {
+    width: auto;
+    margin: auto;
+}
+
 
 /* responsividae */
 @media (min-width:768px) {
@@ -359,9 +484,77 @@ main-content {
     #home, .projetos, .sobre, .contato {
         padding: 8rem 6rem 4rem 6rem;
     }
+
+
+} /* fim 768 */
+
+
+@media(min-width:992px ) {
+    
+.projetos-card{
+        flex-direction: row;
+    }
+.card-cover{
+    width: 55%;
 }
+.card-reverse{
+    flex-direction: row-reverse;
+    justify-content: space-between;
+}
+}
+
+
 
 .cor{
-    color: red;
+    color: rgb(216, 76, 20);
+    font-size: 24px;
+}
+.amarelo{
+    color: rgb(167, 12, 214);
+    font-size: 24px;
+} /* fime 992 */
+
+@media (min-width: 1200px) {
+h2 {
+    font-size: 4rem;
 }
 
+h3 {
+    font-size: 2.rem;
+}
+
+#home {
+    padding: 10rem 6rem 2rem;
+}
+
+.main-content .btn {
+    width: auto;
+}
+
+p, span, li {
+    font-size: 1.15rem;
+}
+.card-button .btn,
+
+}
+@media (min-width=1400px) {
+    
+}
+@media (min-width:1400px) {
+h1 {
+    font-size: 6.25rem;
+}  
+h2{
+    font-size: 4.5rem;
+}  
+h3{
+    font-size: 3.25rem;
+}
+.header {
+    padding: 12rem 15rem 2rem;
+}
+.projetos, .sobre, .contato{
+    padding: 10rem 15rem 4rem;
+}
+
+}
