@@ -66,21 +66,33 @@ b {
 
 h1 {
     font-size: 2rem;
-    font: weight 200px; ;
-}
+    font: weight 200px; 
+    font-family: "Klee One", cursive;
+    font-weight: 400;
+    font-style: normal;
+      }
+      
+
 
 h2 {
-
+    font-family: "Klee One", cursive;
+    font-weight: 400;
+    font-style: normal;
 
 }
 h3 {
 
-
+    font-family: "Bungee Inline", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 500;
 }
 
 p, span, li {
 font-size: 1rem;
-
+font-family: "Klee One", cursive;
+    font-weight: 400;
+    font-style: normal;
 }
 
 
@@ -98,6 +110,11 @@ p {
     box-sizing: border-box;
     /* inclui bordas e preenchimentos no tamanho total do elemento */
     list-style: none;
+}
+
+.amarelo{
+    color: #e98008;
+    font-weight: 1000;
 }
 
 /* Fim do reset */
@@ -123,10 +140,11 @@ p {
 
 /* Estilo para a logo */
 .logo {
-    width: 3.25rem;
+    width: 5rem;
     /* largura da logo */
-    height: 3.25rem;
+    height: 2.25rem;
     /* altura da logo */
+    box-shadow:5px 5px 2px #ca8401;
 }
 
 /* Estilo para o botão de alternar tema */
@@ -160,6 +178,21 @@ p {
     width: 100%;
 }
 
+ .sobre{
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+
+ }
+
+ .sobre-logo {
+    width: 100%;
+    object-fit:cover;
+    object-position:center ;
+    pointer-events: none;
+    border-radius: 50rem;
+    border: 8px solid var(--hover-menu);
+ }
 
 /* .menu-link {
     display: flex;
@@ -336,18 +369,21 @@ main-content {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+
 }
 
 .projetos-container{
     display: flex;
     flex-direction: column;
-    gap: 4rem;
+    gap: 2rem;
+    
 }
 
 .projetos-card {
     display: flex;
     flex-direction: column;
     gap: 2rem;
+   
 }
 
 .card-cover { /* ima imagem ou fotos
@@ -356,7 +392,8 @@ main-content {
     flex-direction: column;
     justify-content: flex-end;
     align-items: flex-start;
-    gap: 1rem;
+    gap: 2rem;
+    
 }
 
 
@@ -374,10 +411,12 @@ main-content {
 }
 
 
+
+
 .card-button, .card-descricao{
     display: flex;
     flex-flow: row wrap;
-    justify-content: right;
+    justify-content:left;
 }
 
 .card-item, .sobre-item { /* topico lista  */
@@ -491,7 +530,7 @@ main-content {
 
 
 @media (min-width: 992px) {
-    .projeto-card {
+    .projetos-card {
         flex-direction: row;
     }
     .card-cover {
