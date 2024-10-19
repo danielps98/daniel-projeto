@@ -6,14 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title> Daniel pereira da Silva | Meu Website 🔏/</title>
 
+  
   <!--  Estilo CSS -->
   <link rel="stylesheet" href="css/estilo.css" />
 
   <!-- Bootstrap icon -->
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+
+<!-- AOS css -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
 </head>
 
-<body>
+<body >
   <header id="header">
     <nav class="header-nav">
       <!-- menu ou navegation (shift+alt+a=comentário) -->
@@ -157,22 +162,22 @@
   </main>
 
   <section id="projetos" class="projetos">
-    <h2>projetos</h2>
+    <h2  data-aos="fade-up-right" data-aos-delay="500">projetos</h2>
 
-    <div class="projetos-container"><!--inicio projeto-container -->
+    <div class="projetos-container"data-aos="fade-up-right" data-aos-delay="1000"><!--inicio projeto-container -->
 
-      <div class="projetos-card"> <!--  inicio projeto 1 -->
+      <div class="projetos-card"data-aos="fade-up-right" data-aos-delay="1200"> <!--  inicio projeto 1 -->
 
-        <img width="50%" height="400" src="img/projetos/games-store.jpg" alt="" class="card-cover">
+        <img  src="img/projetos/games-store.jpg" alt="" class="card-cover">
 
         <div class="card-body"><!-- inicio card body -->
 
-          <h3 class="card-title"><span class="cor"><span class="amarelo">D.S.</span> Mundo-Tech </span> </h3>
+          <h3 class="card-title" data-aos="fade-up-right" data-aos-delay="1400"><span class="cor"><span class="amarelo">D.S.</span> Mundo-Tech </span> </h3>
           <!-- inicio titulo -->
 
-          <p class="card-descricao"> Lojas online  </p>
+          <p class="card-descricao"data-aos="fade-up-right" data-aos-delay="1400"> Lojas online  </p>
 
-          <ul class="card-lista">
+          <ul class="card-lista"data-aos="fade-up-right" data-aos-delay="1600">
 
             <li class="card-item">
                 <i class="bi bi-cart"></i>
@@ -202,7 +207,7 @@
 
 
 
-            <button class="btn">
+            <button class="btn" >
 
               <a href="https://github.com/danielps98/daniel-projeto" target="_blank">
                 <span>repositorio</span>
@@ -218,7 +223,7 @@
       </div><!--fim projeto 1 -->
       <div class="projetos-card card-reverse"> <!--  inicio projeto 1 -->
 
-        <img width="50%" height="400" src="img/img-jpg.webp" alt="" class="card-cover">
+        <img src="img/img-jpg.webp" alt="" class="card-cover">
 
         <div class="card-body"><!-- inicio card body -->
 
@@ -273,7 +278,7 @@
       </div><!--fim projeto 2 -->
       <div class="projetos-card "> <!--  inicio projeto 1 -->
 
-        <img width="50%" height="400" src="./img/projetos/livro.jpg" alt="" class="card-cover">
+        <img src="./img/projetos/livro.jpg" alt="" class="card-cover">
 
         <div class="card-body"><!-- inicio card body -->
 
@@ -339,8 +344,9 @@
 
     <h2>contato</h2>
   </section>
-
-
+  
+<!--  AOS JS -->
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
   <script src="./js/script.js"> </script>
 
