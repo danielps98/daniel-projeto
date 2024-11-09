@@ -1,0 +1,694 @@
+:root,
+:root[data-theme="dark"] {
+    --primary-color: #fff;
+    /* cor do texto para o tema escuro */
+    --primary-bg: hsla(0, 3%, 7%, 0.959);
+    /* cor de fundo para o tema escuro */
+    --hover-menu: #6b6565;
+    /* cor do menu ao passar o mouse */
+    --icon-color: #7b5ac7;
+    /* cor dos ícones */ 
+    --icon-tema: #cfb12a;
+    --hover-socia: aqua;
+    --menu-texto:var(--primary-color);
+    --cor-titulo:var(--primary-color);
+    
+ 
+
+}
+
+
+
+
+:root[data-theme="light"] {
+    --cor-texto-primario: #000;
+    /* cor do texto para o tema claro */
+    --primary-bg: #fcf5f5af;
+    /* cor de fundo para o tema claro */
+    --primary-color: #000;
+    /* cor do texto para o tema claro */
+    --hover-social {
+        color:yellow ;
+        --cor-titulo:var( var(--cor-texto-primario))
+    }
+}
+
+body {
+    background: var(--primary-bg);
+    /* define a cor de fundo do body */
+    color: var(--primary-color);
+    /* define a cor do texto */
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    /* fontes utilizadas para o texto */
+}
+
+html[data-theme="light"] .logo {
+     filter:invert(1);
+}
+
+a {
+    text-decoration: none;
+    /* remove o sublinhado dos links */
+    color: var(--primary-color);
+    /* define a cor padrão dos links */
+}
+
+a:hover {
+    color: var(--hover-menu);
+    /* define a cor dos links ao passar o mouse */
+}
+
+i {
+    color: var(--icon-color);
+    /* define a cor dos ícones */
+ 
+}
+
+b {
+  font-weight: 600; 
+  
+}
+
+h1 {
+    font-size: 2rem;
+    font: weight 200px; 
+    font-family: "Klee One", cursive;
+    font-weight: 400;
+    font-style: normal;
+      }
+      
+
+
+h2 {
+    font-family: "Klee One", cursive;
+    font-weight: 400;
+    font-style: normal;
+
+}
+h3 {
+    font-size: 20px;
+    color: #2552a7;
+
+    font-family: "Bungee Inline", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-weight: 500;
+}
+
+p, span, li {
+    font-size: 1rem;
+    font-family: "Klee One", cursive;
+    font-weight: 400;
+    font-style: normal;
+    color: #9b9fa0;
+}
+
+
+p {
+    text-align: justify;
+    margin: 10px;
+  
+}
+/* Reset CSS para remover margens e preenchimentos padrão */
+* {
+    margin: 0;
+    /* remove margens de todos os elementos */
+    padding: 0;
+    /* remove preenchimentos de todos os elementos */
+    box-sizing: border-box;
+    /* inclui bordas e preenchimentos no tamanho total do elemento */
+    list-style: none;
+}
+
+.amarelo{
+    color: #e98008;
+    font-weight: 1000;
+}
+
+/* Fim do reset */
+
+/* Estilo para o header */
+#header {
+    display: flex;
+    /* ativa o modo de layout flexível */
+    flex-flow: row wrap;
+    /* itens dispostos em linha e quebram para a próxima linha se necessário */
+    justify-content: space-between;
+    /* distribui espaços entre os itens */
+    align-items: center;
+    /* alinha os itens verticalmente no centro do contêiner */
+    width: 100%;
+    /* largura total do contêiner */
+    padding: 0.5rem 1rem;
+    /* espaçamento interno do header */
+    z-index: 2;
+    /* define a ordem de empilhamento do header */
+    background: var(--primary-bg);
+}
+
+/* Estilo para a logo */
+.logo {
+    width: 5rem;
+    /* largura da logo */
+    height: 4.25rem;
+    /* altura da logo */
+   
+}
+
+/* Estilo para o botão de alternar tema */
+.header-toggle {
+    display: flex;
+    /* ativa o modo flexível */
+    justify-content: flex-end;
+    /* alinha o conteúdo à direita */
+}
+
+/* Estilo específico para o botão de alternar tema */
+#toggleTheme {
+    color: var(--icon-tema);
+    /* cor do texto do botão */
+    font-size: 2rem;
+    /* tamanho da fonte do botão */
+    cursor: pointer;
+    /* muda o cursor para indicar que é clicável */
+}
+
+.menu {
+    /* UL */
+    display: flex;
+    align-items: center;
+    background: var(--primary-bg);
+    gap: 1rem;
+}
+
+
+.menu-item {
+    width: 100%;
+}
+
+ 
+/* .menu-link {
+    display: flex;
+    align-items: ;
+}
+ */
+
+.header-nav {
+    display: none;
+}
+
+
+/* menu-mobile */
+.menu-mobile {
+    width: 100vw;
+    position: fixed;
+    bottom: 0;
+    justify-content: space-between;
+    border-top: 1px solid white;
+    z-index: 99999;
+}
+
+
+.menu-mobile .menu-link {
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.5rem 1rem;
+}
+
+
+.menu-link.active .menu-text,
+.menu-link:hover .menu-text {
+color: rgb(196, 39, 162);/*  cor de link */
+
+}
+
+.menu-icon1, .menu-text {
+    color:var(--menu-texto);
+  
+    
+}
+
+/* .menu-link:hover,.{
+color: #b826a4;
+    } */
+
+
+
+
+
+
+
+.menu-icon1{
+    color: #e7dddd; /* bi-github */
+    font-weight: 600;
+    font-size: 2rem;
+    
+}
+
+
+.menu-icon2{
+    color: #01ca2c; /* bi bi-whatsapp */
+    font-weight: 600;
+    font-size: 2rem;
+    
+}
+.menu-icon3{
+    color: #1fa1c2; /* menu-icon3 bi bi-facebook */
+    font-weight: 600;
+    font-size: 2rem;
+    
+}
+.menu-icon4{
+    color: #134aaf; /* bi bi-linkedin */
+    font-weight: 600;
+    font-size: 2rem;
+    
+}
+.menu-icon1:hover,
+.menu-icon2:hover,
+.menu-icon3:hover,
+.menu-icon4:hover{
+    color: #ddc7c7;
+    padding: 2px;
+    border-top: 1px solid white;
+}
+
+ .menu-icon {
+    font-size: 2rem;
+ }
+
+ 
+
+ .menu-text {
+    font-size: .75rem;
+    text-transform: uppercase;
+ }
+
+ .menu-principal {
+     gap: 3rem;  
+ }
+ .menu-social {
+    gap: 2rem;
+   
+ }
+
+
+
+
+.menu-social
+.menu-icon:hover {
+    color: #f401fc;
+    padding: 2px;
+}
+
+.btn{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+    background: transparent;
+    border-radius: 3rem;
+    color: var(--primary-color);
+    border: none;
+    padding: .5rem 1.5rem;
+    cursor: pointer;
+
+}
+.btn:hover{
+    transform: scale(1.05);
+  transition: ease-in-out .5s;
+ 
+}
+
+.btn span, .btn i {
+    font-size: 1.5rem;
+    text-transform: uppercase;
+
+}
+.btn-primary span{
+    color: var(--primary-color);
+}
+.btn-primary{
+    border: 3px solid var(--hover-menu);
+}
+
+
+/* main
+ */
+#home {
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
+}
+
+main-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+
+.video iframe {
+    width: 100%;
+    aspect-ratio:16/9 ;
+}
+
+#home, .projetos, .sobre, .contato {
+    padding: 2.5rem 1rem;
+}
+
+.projetos{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+}
+
+.projetos-container{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    
+}
+
+.projetos-card {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+   
+}
+
+.card-cover { /* ima imagem ou fotos
+     */
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    gap: 2rem;
+    
+}
+
+
+.card-title { /* h3 */
+    font-size:1.5rem ;
+    color:var(--cor-titulo) ;
+    font-weight:100 ;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.card-lista, .sobre-lista {
+   margin-left: 1.25rem;
+   margin-top: 15px;
+   margin-bottom: 25px;
+}
+
+
+
+
+.card-button, .card-descricao{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content:left;
+}
+
+.card-item, .sobre-item { /* topico lista  */
+    /* list-style:none */
+   list-style:none;               /* disc */
+
+
+}
+
+
+.card-item i.bi-cart {
+    color: #FFC107; /* Cor do ícone do Mercado Livre */
+    margin: left;
+}
+
+.card-item i.bi-house {
+    color: #FF5722; /* Cor do ícone das Casas Bahia */
+}
+
+.card-item i.bi-basket {
+    color: #007BFF; /* Cor do ícone das Americanas */
+}
+
+/* Efeito de hover */
+.card-item:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+}
+
+
+.card-item i.bi-controller {
+    color: #FF4081; /* Cor do ícone do Nintendo Switch */
+}
+
+.card-item i.bi-playstation {
+    color: #1E88E5; /* Cor do ícone do PS5 */
+}
+
+.card-item i.bi-google-play {
+    color: #76FF03; /* Cor do ícone do Google Play */
+}
+
+/* Efeito de hover */
+.card-item:hover {
+    background-color: #f0f0f0; /* Cor de fundo ao passar o mouse */
+}
+
+.card-item a {
+    text-decoration: none; /* Remove o sublinhado */
+    color: inherit; /* Herda a cor do elemento pai */
+    margin-left: 10px; /* Espaçamento entre o ícone e o texto */
+}
+.card-item .d1.bi-book{
+    color: #01ca2c;
+}
+.card-item .d2.bi-book{
+    color: #0158ca;
+}
+.card-item .d3.bi-book{
+    color: #ca0187;
+}
+
+
+.card-item:hover{
+    color: #134aaf;
+    padding: 2px;
+    
+}
+
+.card-button .btn {
+    padding: 0.65rem 1.25rem;
+    margin-top: 15px;
+}
+
+ 
+.card-button .btn span {
+    font-size: 1rem;
+}
+
+.projetos .btn {
+    width: auto;
+    margin: auto;
+}
+
+
+.sobre{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    
+     }
+    
+     .sobre-logo {
+        width: 100%;
+        object-fit:cover;
+        object-position:center ;
+        pointer-events: none;
+        border-radius: 50rem;
+        border: 8px solid var(--hover-menu);
+     }
+    
+    
+    .sobre-conteudo1,
+    .sobre-conteudo2  {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+    }
+    
+    
+    .sobre-descricao{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 1.5rem;
+    }
+    
+    
+    /* icones */
+    .sobre-icones {
+    display: flex;
+    
+    color: #1fa1c2;
+    }
+    
+    .sobre-conteudo1 .col1,
+    .sobre-conteudo2 .col2 {
+        display: flex;
+        flex-direction: column;
+        text-align: justify;
+        gap: 2rem ;
+       
+    }
+
+    .sobre-conteudo2 .col1 .row1
+    .sobre-conteudo2 .col2 .row2 {
+        display: flex;
+        flex-direction: column;
+        gap: .6rem;
+    }
+
+    .accordion-header {
+        width: 100%;
+        display: flex;
+        padding: 0.75rem 1rem;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid var(--hover-menu);
+        background: transparent;
+        text-align: left;
+        cursor: pointer;
+        transform: ease-in-out 0.3;
+    }
+
+    .accordion-header span {
+        color: var(--hover-menu);
+    }
+
+    /* esconder as respostas */
+    .accordion-body {
+        display: none;
+        padding: 1.25rem;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .625;
+        border: 1px solid var(--icon-tema);
+    }
+
+        .accordion-item.active .accordion-header {
+            background-color: #242729;
+        }
+
+            /* CONTEUDO APARECENDO APOS O CLICK */
+        .accordion-item.active .accordion-body {
+            display: flex;
+        }
+         
+        /* adicionar classe no icone  */
+        .accordion-item.active .bi-caret-down-fill { 
+            transform: rotate(180deg);
+        }
+        
+/* responsividas */
+@media (min-width: 768px) {
+    #header {
+       position: fixed;
+       padding: 1rem 6rem;
+    }
+    .nav-mobile {
+        display: none;
+    }
+    .header-nav{
+        display: flex;
+    }
+    .header-nav, 
+    .header-toggle {
+        min-width: 30%;
+    }
+    h1 {
+        font-size: 5rem;
+    }
+    h2 {
+        font-size: 3rem;
+    }
+    #home, .projetos, .sobre, .contato  {
+        padding: 8rem 6rem 4rem 6rem;
+    }
+}
+
+
+@media (min-width: 992px) {
+    .projetos-card {
+        flex-direction: row;
+    }
+    .card-cover {
+        width: 55%;
+    }
+        
+    .card-reverse{
+        flex-direction: row-reverse;
+        justify-content: space-between;
+
+    }
+    .sobre {
+        gap: 5rem;
+    }
+    .sobre-conteudo1,
+    .sobre-conteudo2 {
+        display: grid;
+        grid-template-columns: 40% 60%;
+    }
+   
+}
+/* fim 992 */
+
+
+@media (min-width: 1200px) {
+
+    h2 {
+        font-size: 4rem;
+    }
+
+    h3 {
+        font-size: 2.5rem;
+    }
+
+    #home {
+        padding: 10rem 6rem 2rem;
+    }
+
+    .main-content .btn {
+        width: auto;
+    }
+    
+    p, span, li {
+        font-size: 1.15rem;
+    }
+    .card-button .btn, 
+    .descricao-button .btn {
+        width: auto;
+    }
+}
+
+    
+@media (min-width: 1400px) {
+    h1 {
+        font-size: 6.25rem;
+    }
+    h2{
+        font-size: 4.5rem;
+    }
+    h3 {
+        font-size: 3.25rem;
+    }
+    .header {
+        padding: 12rem 15rem 2rem;
+    }
+    .projetos, .sobre, .contato {
+        padding: 10rem 15rem 4rem;
+    }
+}
