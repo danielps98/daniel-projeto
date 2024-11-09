@@ -667,6 +667,18 @@ main-content {
     text-transform: uppercase;
 }
 
+    footer{
+        margin-bottom: 5rem;
+    }
+footer p {
+    font-size: .900rem;
+    text-align: center;
+    padding: 1rem;
+
+}
+footer p a{
+    color: #007BFF;
+}
 /* responsividas */
 @media (min-width: 768px) {
     #header {
